@@ -1,0 +1,25 @@
+{
+  "name": "derrickrosepage",
+  "version": "1.0.0",
+  "description": "Page made with CSS and HTML",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcriadog/DerrickRosePage.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexcriadog/DerrickRosePage/issues"
+  },
+  "homepage": "https://github.com/alexcriadog/DerrickRosePage#readme",
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  }
+}
