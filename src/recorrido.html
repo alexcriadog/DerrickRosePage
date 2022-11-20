@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Derrick Rose</title>
+    <link rel="stylesheet" href="styles/main.scss" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Inicio</a>
+        <a href="recorrido.html" class="active">Recorrido</a>
+        <a href="#">Palmarés</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <section class="timeline">
+        <div class="container">
+            <ul>
+                <li>
+                    <div>
+                        <time>2009</time>
+                        <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2009</time>
+                        <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2009</time>
+                        <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2009</time>
+                        <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2009</time>
+                        <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        var items = document.querySelectorAll(".timeline li");
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                console.log(i);
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    </script>
+</body>
+
+</html>

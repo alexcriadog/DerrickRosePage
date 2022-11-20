@@ -1,11 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap";
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  max-height: 100vh;
+  height: 100vh;
   background-color: #ededed;
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 27%, 1)'/><path d='M40 45a5 5 0 110-10 5 5 0 010 10zM0 45a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm40 0a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='hsla(345, 100%, 43%, 1)' fill='none'/><path d='M20 25a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='hsla(345, 100%, 43%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   flex-direction: column;
@@ -18,7 +19,12 @@ body {
   margin: 0 100px;
 }
 
+::selection {
+  background: #f45b69;
+}
+
 .topnav {
+  min-height: 50px;
   background-color: #444;
   flex: 1;
   overflow: hidden;
@@ -41,7 +47,7 @@ body {
 
 .topnav a.active {
   color: #ededed;
-  background-color: #da0037;
+  background-color: #f45b69;
 }
 
 .topnav .icon {
@@ -76,11 +82,11 @@ body {
 }
 
 .portada {
-  flex: 1;
+  flex: 50;
 }
 
 .portada .container {
-  height: auto;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
@@ -96,6 +102,116 @@ body {
   color: #ededed;
   font-size: xx-large;
   font-weight: 200;
+}
+
+.timeline {
+  flex: 50;
+}
+
+.timeline .container {
+  height: 100%;
+}
+
+.timeline img {
+  height: 80px;
+  width: auto;
+}
+
+.timeline ul li {
+  width: 6px;
+  background-color: #171717;
+  margin: 0 auto;
+  padding-top: 50px;
+  list-style-type: none;
+  position: relative;
+}
+
+.timeline ul li:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: inherit;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline ul li div {
+  width: 400px;
+  background: #f45b69;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+}
+
+.timeline ul li div:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  bottom: 7px;
+}
+
+.timeline ul li:nth-child(2n+1) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(2n+1) div:before {
+  border-width: 8px 16px 8px 0;
+  border-color: #0000 #f45b69 #0000 #0000;
+  left: -15px;
+}
+
+.timeline ul li:nth-child(2n) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(2n) div:before {
+  border-width: 8px 0 8px 16px;
+  border-color: #0000 #0000 #0000 #f45b69;
+  right: -15px;
+}
+
+.timeline ul li:after {
+  background: #fff;
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view:after {
+  background: #f45b69;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(2n+1) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(2n) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+
+  .timeline ul li:nth-child(2n) div {
+    left: -289px;
+  }
 }
 
 /*# sourceMappingURL=index.971c2ea4.css.map */
