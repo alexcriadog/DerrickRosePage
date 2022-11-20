@@ -104,6 +104,13 @@ body {
   font-weight: 200;
 }
 
+@media screen and (max-width: 900px) {
+  .portada img {
+    width: 400px;
+    height: auto;
+  }
+}
+
 .timeline {
   flex: 50;
 }

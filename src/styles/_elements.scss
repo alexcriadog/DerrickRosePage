@@ -105,6 +105,13 @@ body {
     font-size: xx-large;
 }
 
+@media screen and (max-width: 900px) {
+    .portada img {
+        width: 400px;
+        height: auto;
+    }
+}
+
 /* RECORRIDO */
 .timeline {
     flex: 50;
