@@ -22,6 +22,12 @@ body {
     background: $red;
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 0;
+    }
+}
+
 /* TOP NAV */
 .topnav {
     flex: 1;
