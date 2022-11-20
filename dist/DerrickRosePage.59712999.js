@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"7Aums":[function(require,module,exports) {
+})({"lX4BT":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "fe4256060641b553";
+module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -531,13 +531,8 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"bNKaB":[function(require,module,exports) {
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") x.className += " responsive";
-    else x.className = "topnav";
-}
+},{}],"4M6V8":[function(require,module,exports) {
 
-},{}]},["7Aums","bNKaB"], "bNKaB", "parcelRequireb7fe")
+},{}]},["lX4BT","4M6V8"], "4M6V8", "parcelRequireb7fe")
 
-//# sourceMappingURL=index.0641b553.js.map
+//# sourceMappingURL=DerrickRosePage.59712999.js.map

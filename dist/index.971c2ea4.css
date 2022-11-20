@@ -1,0 +1,101 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-height: 100vh;
+  background-color: #ededed;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 27%, 1)'/><path d='M40 45a5 5 0 110-10 5 5 0 010 10zM0 45a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm40 0a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='hsla(345, 100%, 43%, 1)' fill='none'/><path d='M20 25a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='hsla(345, 100%, 43%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+}
+
+.container {
+  background-color: #17171785;
+  margin: 0 100px;
+}
+
+.topnav {
+  background-color: #444;
+  flex: 1;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #ededed;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a:hover {
+  color: #171717;
+  background-color: #ededed;
+}
+
+.topnav a.active {
+  color: #ededed;
+  background-color: #da0037;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    text-align: left;
+    display: block;
+  }
+}
+
+.portada {
+  flex: 1;
+}
+
+.portada .container {
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  display: flex;
+}
+
+.portada img {
+  width: 600px;
+  height: auto;
+}
+
+.portada span {
+  color: #ededed;
+  font-size: xx-large;
+  font-weight: 200;
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */

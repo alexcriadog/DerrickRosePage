@@ -21,5 +21,8 @@
   "homepage": "https://github.com/alexcriadog/DerrickRosePage#readme",
   "devDependencies": {
     "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.8.0"
   }
 }
