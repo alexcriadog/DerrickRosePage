@@ -14,11 +14,11 @@ body {
 
 ::-moz-selection {
     /* Code for Firefox */
-    background: $red;
+    background: $white;
 }
 
 ::selection {
-    background: $red;
+    background: $white;
 }
 
 @media screen and (max-width: 600px) {
@@ -34,7 +34,6 @@ body {
     overflow: hidden;
     background-color: $black;
     width: 100%;
-    border-bottom: 2px solid $opacitywhite;
     position: fixed;
     z-index: 10;
 }
@@ -42,21 +41,30 @@ body {
 .topnav a {
     float: left;
     display: block;
-    color: $white;
+    color: $opacitywhite;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
+    transition: transform .2s;
+    margin-right: 5px
 }
 
 .topnav a:hover {
-    background-color: $white;
-    color: $black;
+    color: $white;
+    transform: scale(1.1);
 }
 
 .topnav a.active {
-    background-color: $red;
+    font-weight: bold;
     color: $white;
+    text-decoration: line-through $red;
+}
+
+#name {
+    float: right;
+    font-weight: bold;
+    color: $red;
 }
 
 .topnav .icon {
@@ -113,12 +121,24 @@ body {
     width: 24%;
 }
 
-.portada span {
-    color: $white;
-    font-weight: 200;
-    font-size: xx-large;
-    position: relative;
-    bottom: 50px;
+.portada h1 {
+    color: $red;
+    font-weight: bold;
+    font-size: 90px;
+    // position: relative;
+    // bottom: 50px;
+}
+
+.portada .teams img {
+    padding-top: 30px;
+    height: 150px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: transform .2s;
+}
+
+.portada .teams img:hover {
+    transform: scale(1.3);
 }
 
 @media screen and (max-width: 900px) {
@@ -169,7 +189,7 @@ body {
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background: $red;
+    background: $white;
 }
 
 .timeline ul li div::before {
