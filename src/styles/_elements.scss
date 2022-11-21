@@ -33,6 +33,10 @@ body {
     min-height: 50px;
     overflow: hidden;
     background-color: $black;
+    width: 100%;
+    border-bottom: 2px solid $opacitywhite;
+    position: fixed;
+    z-index: 10;
 }
 
 .topnav a {
@@ -95,7 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    padding: 80px 0 10px 0;
     height: 100%;
 }
 
@@ -114,7 +118,7 @@ body {
     font-weight: 200;
     font-size: xx-large;
     position: relative;
-    bottom: 50px
+    bottom: 50px;
 }
 
 @media screen and (max-width: 900px) {
