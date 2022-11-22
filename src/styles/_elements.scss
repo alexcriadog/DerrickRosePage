@@ -29,6 +29,7 @@ body {
 
 /* TOP NAV */
 .topnav {
+    font-family: 'Kanit', sans-serif;
     flex: 1;
     min-height: 50px;
     overflow: hidden;
@@ -59,6 +60,7 @@ body {
     font-weight: bold;
     color: $white;
     text-decoration: line-through $red;
+    -webkit-text-decoration-line: line-through $red;
 }
 
 #name {
@@ -148,114 +150,96 @@ body {
     }
 }
 
-/* RECORRIDO */
-.timeline {
+// RECORRIDO
+.recorrido {
     flex: 50;
 }
 
-.timeline .container {
-    margin-bottom: 10px;
+.recorrido .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
 }
 
-.timeline img {
-    height: 80px;
+.mySlides {
+    height: 100%;
     width: auto;
+    display: none;
 }
 
-.timeline ul li {
-    list-style-type: none;
-    position: relative;
-    width: 6px;
-    margin: 0 auto;
-    padding-top: 50px;
-    background-color: $black;
+.mySlides img {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
-.timeline ul li::after {
-    content: '';
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 100;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 100;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dots{
+    position: relative;
+    bottom: 30px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
     border-radius: 50%;
-    background: inherit;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.timeline ul li div {
-    position: relative;
-    bottom: 0;
-    width: 400px;
-    padding: 15px;
-    background: $white;
+.active, .dot:hover {
+    background-color: #717171;
 }
 
-.timeline ul li div::before {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    width: 0;
-    height: 0;
-    border-style: solid;
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-.timeline ul li:nth-child(odd) div {
-    left: 45px;
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
-.timeline ul li:nth-child(odd) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
-}
-
-.timeline ul li:nth-child(even) div {
-    left: -439px;
-}
-
-.timeline ul li:nth-child(even) div::before {
-    right: -15px;
-    border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #F45B69;
-}
-
-.timeline ul li::after {
-    background: #fff;
-    transition: background .5s ease-in-out;
-}
-
-.timeline ul li.in-view::after {
-    background: #F45B69;
-}
-
-.timeline ul li div {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .5s ease-in-out;
-}
-
-.timeline ul li:nth-child(odd) div {
-    transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div {
-    transform: translate3d(-200px, 0, 0);
-}
-
-.timeline ul li.in-view div {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-}
-
-@media screen and (max-width: 900px) {
-    .timeline ul li div {
-        width: 250px;
-    }
-
-    .timeline ul li:nth-child(even) div {
-        left: -289px;
-    }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
 }
