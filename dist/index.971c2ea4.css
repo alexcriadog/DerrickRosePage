@@ -164,14 +164,20 @@ body {
 
 .mySlides {
   height: 100%;
-  width: auto;
+  width: 100%;
+  filter: grayscale();
+  background-repeat: no-repeat;
+  background-size: cover;
   display: none;
 }
 
 .mySlides img {
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+  height: 300px;
+  width: auto;
+  z-index: 1;
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
 }
 
 .prev, .next {
@@ -204,29 +210,29 @@ body {
   background-color: #000c;
 }
 
-.dots {
-  position: relative;
-  bottom: 30px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 0 2px;
-  transition: background-color .6s;
-  display: inline-block;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.slide1 {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/512/817/101/derrick-rose-photos-wallpaper-preview.jpg");
+}
+
+.slide2 {
+  background-image: url("https://www.kolpaper.com/wp-content/uploads/2021/02/Derrick-Rose-Knicks-Wallpaper-PC.jpg");
+}
+
+.slide3 {
+  background-image: url("https://www.gigantes.com/wp-content/uploads/2018/11/GettyImages-1061943254.jpg");
+}
+
+.slide4 {
+  background-image: url("https://cdn.vox-cdn.com/thumbor/zhVQ_ckXWx0IjDor8f-Ih06wiOU=/0x0:3200x2133/1200x800/filters:focal(102x324:614x836)/cdn.vox-cdn.com/uploads/chorus_image/image/66165349/usa_today_13951116.0.jpg");
+}
+
+.slide5 {
+  background-image: url("https://wallpaper.dog/large/17007476.jpg");
 }
 
 @keyframes fade {
