@@ -143,10 +143,25 @@ body {
     transform: scale(1.3);
 }
 
-@media screen and (max-width: 900px) {
-    .portada img {
-        width: 400px;
-        height: auto;
+@media screen and (max-width: 600px) {
+    .portada {
+        .images{
+            justify-content: space-around;
+        }
+
+        img{
+            width: 50%;
+            height: auto;
+        }
+
+        .out{
+            display: none;
+        }
+    }
+
+    .portada .teams img {
+        height: 100px;
+        width: auto;
     }
 }
 
@@ -175,16 +190,13 @@ body {
     height: 300px;
     width: auto;
     z-index: 1;
-    position: absolute;
-    bottom: 300px;
-    left: 100px;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     width: auto;
     padding: 16px;
     margin-top: -22px;
@@ -202,14 +214,8 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
-/* Position the "next button" to the right */
-.prev {
-    left: 100;
-    border-radius: 3px 0 0 3px;
-}
-
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -245,6 +251,119 @@ body {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+@media only screen and (max-width: 900px) {
+    .next {
+        font-size: 11px;
+        height: 40px;
+        background-color: $red;
+        color: $black;
+    }
+
+    .mySlides{
+        img {
+            height: 100px;
+            width: auto;
+            display: none;
+        }
+    }
+
+    .next {
+        bottom: 100px;
+        right: 100px;
+    }
+}
+
+// NOTICIAS
+.news {
+    flex: 50;
+}
+
+.news .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.news ul{
+    list-style-type: none;
+    margin-top: 80px;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+    li{
+        width: 80%;
+        display: flex;
+        background-color: $black;
+        margin: 10px 0;
+    }
+
+    li .content{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        color: $red;
+        padding: 20px;
+
+        p{
+            text-align: left;
+            color: $white;
+        }
+    }
+
+    li:nth-child(even){
+        align-self: start;
+    }
+
+    li:nth-child(odd){
+        align-self: end;
+    }
+
+    img{
+        height: 200px;
+        width: auto;
+        align-self: center;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .news ul li{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+//DETALLE
+.detalle {
+    flex: 50;
+}
+
+.detalle .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 60px 100px;
+    h1{
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        align-self: start;
+        color: $red;
+    }
+
+    p{
+        color: $white;
+    }
+
+    img{
+        width: 550px;
+        margin: 20px 0;
+    }
 }

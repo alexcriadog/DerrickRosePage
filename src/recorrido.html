@@ -11,9 +11,9 @@
 <body>
     <div class="topnav" id="myTopnav">
         <a href="index.html">INICIO</a>
+        <a href="detalle.html">DETALLE</a>
         <a href="recorrido.html" class="active">RECORRIDO</a>
         <a href="news.html">NOTICIAS</a>
-        <a href="#">ROPA</a>
         <a class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -22,26 +22,29 @@
 
     <div class="recorrido">
         <div class="container">
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-
             <div class="mySlides fade slide1">
                 <img src="https://logos-world.net/wp-content/uploads/2020/05/Chicago-Bulls-Symbol.png">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DQ9y-Brgy_U?autoplay=1&mute=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="mySlides fade slide2">
                 <img src="https://seeklogo.com/images/N/new-york-knicks-logo-2864221412-seeklogo.com.png">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xwtFX__iw30?autoplay=1&mute=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="mySlides fade slide3">
                 <img src="https://logos-world.net/wp-content/uploads/2020/05/Cleveland-Cavaliers-logo.png">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/k45ZOphklaQ?autoplay=1&mute=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="mySlides fade slide4">
                 <img src="https://cdn.freebiesupply.com/images/large/2x/minnesota-timberwolves-logo-transparent.png">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ur_q_HzAPrA?autoplay=1&mute=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="mySlides fade slide5">
                 <img src="https://cdn.freebiesupply.com/images/large/2x/detroit-pistons-logo-transparent.png">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GwxJ5XJ7Ft4?autoplay=1&mute=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <a class="next" onclick="plusSlides(1)">❯</a>
@@ -49,6 +52,15 @@
     </div>
 
     <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
         let slideIndex = 1;
         showSlides(slideIndex);
         
@@ -63,18 +75,14 @@
         function showSlides(n) {
           let i;
           let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
           if (n > slides.length) {slideIndex = 1}    
           if (n < 1) {slideIndex = slides.length}
           for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
           }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
           slides[slideIndex-1].style.display = "flex";  
-          slides[slideIndex-1].style.justifyContent = "center";  
-          dots[slideIndex-1].className += " active";
+          slides[slideIndex-1].style.justifyContent = "space-around"; 
+          slides[slideIndex-1].style.alignItems = "center";  
         }
     </script>
 </body>
