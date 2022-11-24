@@ -35,18 +35,18 @@ body {
 .topnav {
   min-height: 50px;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   background-color: #171717;
   flex: 1;
   font-family: Kanit, sans-serif;
   position: fixed;
-  overflow: hidden;
 }
 
 .topnav a {
   float: left;
   color: #ededed50;
   text-align: center;
+  background-color: #171717;
   margin-right: 5px;
   padding: 14px 16px;
   font-size: 20px;
@@ -57,7 +57,7 @@ body {
 
 .topnav a:hover {
   color: #ededed;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .topnav a.active {
@@ -85,6 +85,10 @@ body {
   .topnav a.icon {
     float: right;
     display: block;
+  }
+
+  #name {
+    display: none;
   }
 
   .topnav.responsive {
@@ -348,15 +352,29 @@ body {
 .detalle .container h2 {
   color: #f45b69;
   align-self: start;
+  margin-bottom: 5px;
 }
 
 .detalle .container p {
   color: #ededed;
+  text-align: justify;
 }
 
 .detalle .container img {
-  width: 550px;
-  margin: 20px 0;
+  height: auto;
+  width: 430px;
+  margin: 20px 0 20px 20px;
+}
+
+.detalle .container .parrafo {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+  .parrafo {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.971c2ea4.css.map */
