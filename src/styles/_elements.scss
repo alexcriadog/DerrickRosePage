@@ -347,6 +347,7 @@ body {
     align-items: center;
     height: 100%;
     padding: 100px 100px;
+    overflow: scroll;
     h1{
         color: $white;
         margin-bottom: 20px;
@@ -379,6 +380,7 @@ body {
 
 @media only screen and (max-width: 900px) {
     .parrafo{
+        margin-left: 50px;
         flex-direction: column;
     }
 }
