@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/alexcriadog/DerrickRosePage#readme",
   "devDependencies": {
-    "parcel": "^2.8.0"
+    "parcel": "^2.8.0",
+    "posthtml-include": "^1.7.4"
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.8.0"
