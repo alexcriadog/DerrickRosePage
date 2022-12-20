@@ -495,16 +495,16 @@ footer a.active {
 }
 
 .enlaces ul {
+  width: 100%;
   list-style-type: none;
 }
 
 .enlaces li {
   display: flex;
+  overflow: auto;
 }
 
 .enlaces li img {
-  max-height: 150px;
-  width: auto;
   margin: 10px 50px;
 }
 
@@ -513,6 +513,24 @@ footer a.active {
   flex-direction: column;
   justify-content: center;
   display: flex;
+}
+
+@media only screen and (min-width: 900px) {
+  .enlaces li img {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .enlaces ul li {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .enlaces li img {
+    height: auto;
+    max-width: 150px;
+  }
 }
 
 /*# sourceMappingURL=index.971c2ea4.css.map */
